@@ -1,12 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html lang="es">
     <head>
         <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-        <title>Listas</title>
+        <title>Frases</title>
     </head>
     <body>
         <ul>
             <h1>Frases celebres</h1>
+            <h2>Ejemplos:</h2>
             <big>
                 <li>La vida es una obra teatral que no importa cuánto haya durado, sino lo bien que haya sido representada (Séneca).</li>
                 <br/>
@@ -14,18 +15,23 @@
                 <br/>
                 <li>Nuestra mayor gloria no es no caer nunca, sino levantarnos cada vez que caemos (Confucio).</li>
                 <br/>
-                <li>No hagas a los otros lo que no te gustaría que te hicieran a ti (Confucio).</li>
-                <br/>
-                <li>Si das pescado a un hombre hambriento lo nutrirás durante una jornada. Si le enseñas a pescar, le nutrirás toda su vida (Lao-Tsé).</li>
-                <br/>
-                <li>La victoria más difícil es la victoria sobre uno mismo (Aristóteles).</li>
-                <br/>
-                <li>Es sencillo hacer que las cosas sean complicadas, pero es difícil hacer que sean sencillas (Friedrich Nietzsche).</li>
-                <br/>
-                <li>La peor lucha es la que no se hace (Karl Marx).</li>
-                <br/>
                 <li>La felicidad no brota de la razón, sino de la imaginación (Immanuel Kant).</li>            
             </big>
         </ul>
-
-</body></html>
+        <form action="maneja_formulario.php" method="post">
+            <fieldset style="max-width: 1%;">
+                <legend>Datos personales</legend>
+                <label>Nombre</label> <br/>
+                <input type="text" name="nombre" value="" />
+                <br/>
+                <br/>
+                <label>Frases</label> <br/>
+                <textarea id="w3review" name="w3review" rows="4" cols="30"></textarea>
+            </fieldset>
+            <a href="Listas.html"> Menu</a>
+            <a href = "mailto: abc@example.com">
+                <button>Enviar email</button>
+            </a>
+        </form>
+    </body>
+</html>
