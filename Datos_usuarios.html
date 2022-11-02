@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.uis.edu.co" lang="es" xml:lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Rellena tu CV</title>
+    </head>
+    <body>
+        <h3>Rellena tu CV</h3>
+        <form action="/cv/dataCV" method="post" enctype="multipart/form-data">
+            Nombre <br/>
+            <input type="text" name="nombre" value="" size="20" maxlength="30" />
+            <br/>
+            Apellidos <br/>
+            <input type="text" name="apellidos" value="" size="50" maxlength="80" />
+            <br/>
+            Contraseña <br/>
+            <input type="password" name="contrasena" value="" maxlength="10" />
+            <br/><br/>
+            Confirme contraseña <br/>
+            <input type="password" name="contrasena" value="" maxlength="10" />
+            <br/>
+            Identificación <br/>
+            <select name="select">
+                <option value="CC">CC</option>
+                <option value="TI" selected>TI</option>
+                <option value="CE">CE</option>
+            </select>
+            <input type="text" name="idsuj" value="" size="10" maxlength="9" />
+            <br/>
+            Sexo <br/>
+            <input type="radio" name="sexo" value="hombre" checked="checked" /> Hombre
+            <br/>
+            <input type="radio" name="sexo" value="mujer" /> Mujer
+            <br/><br/>
+            Incluir mi foto <br/>
+            <input type="file" name="foto"/>
+            <br/><br/>
+            <input id="check_estudiante" type="checkbox" onclick="Mostrar_opciones_estudiante()"/>
+            <label>Estudiante...</label>
+            <form action="maneja_formulario.php" method="post">
+                <fieldset id="Datos_personales" style="display: none;">
+                <legend>Datos personales</legend>
+                <label>Departamento</label><br>
+                <select name="select">
+                    <option value="Null" selected>- Selecciona -</option>
+                    <option value="a">Antioquia</option>
+                    <option value="c">Casanare</option>
+                    <option value="s">Santander</option>
+                    <option value="v">Valle del Cauca</option>
+                </select>
+                <br/><br/>
+                <label>Fecha de nacimiento</label> <br/>
+                <input type="text" name="dia" value="" size="10"/>
+                <label>de</label>
+                <select name="select">
+                    <option value="Null" selected>- Selecciona -</option>
+                    <option value="a">Enero</option>
+                    <option value="c">Febrero</option>
+                    <option value="s">Marzo</option>
+                    <option value="v">Me da pereza...</option>
+                </select>
+                <label>de</label>
+                <input type="text" name="anio" value="" size="10"/>
+                <br/>
+                <label>Temas de interes</label> <br/>
+                <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+                </fieldset>
+            <script>
+                function Mostrar_opciones_estudiante() {
+                    var checkBox = document.getElementById("check_estudiante");
+                    var text = document.getElementById("Datos_personales");
+                    if (checkBox.checked == true){
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                    }
+                }
+                </script>
+            <br/>
+            <input type="submit" name="enviar" value="Guardar cambios" />
+            <input type="reset" name="limpiar" value="Borrar los datos introducidos" />
+        </form>
+    </body>
+</html>
