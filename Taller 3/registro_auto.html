@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro carro</title>
+    <style>
+
+
+        .formulario{
+        display:flex;
+        flex-direction: column;
+        width: 65%;
+        height: 100vh;
+        justify-content: space-evenly;
+        
+        
+        
+        
+    }
+
+    input{
+        height: 50%;
+        width: 30%;
+        border: none;
+        border-bottom: 2px solid #A6ACAF;
+        padding: 0.1% 0.1%;
+        margin: 2%;
+    }
+
+    .contenido{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly
+    }
+
+    .button{
+        background-color: #5DADE2 ;
+        border: none;
+        text-decoration: none;
+        color: white;
+        padding: 1%;
+        margin: 2%;
+
+    }
+    .pag{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        
+    }
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        background-color: #5DADE2 ;
+        height: 100vh;
+        color: white;
+        margin: 0;
+        
+
+    }
+    .titulo{
+        margin-bottom: 20%;
+    }
+
+    * {
+    margin:0; 
+    padding:0;
+}
+
+.titulo2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.subtitulo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+}
+
+select{
+    height: 50%;
+    margin-top: 5%;
+    width:30%;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+.subtitulo2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.detalles{
+    display: flex;
+    flex-direction: column;
+}
+
+.d1{
+    width: 90%;
+    
+}
+.b1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
+    </style>
+  
+</head>
+<body>
+
+<div class="pag">
+    <div class="info">
+        <h1 class="titulo">INFORMACION DE CARRO</h1>
+    </div>
+<div class="formulario">
+    <div class="titulo2">
+        <h2>INGRESE LOS DATOS DEL CARRO</h2>
+        
+    </div>
+    <div class="subtitulo">
+    <h3>INFORMACION BASICA</h3>
+    </div>
+    <div class="contenido"> 
+        
+        <input type="number" id="pais" name="name" placeholder="id coche"  required
+           min="4" max="11" size="3">
+    
+    
+        <input type="number" id="pais" name="name" placeholder="usuario" required
+           min="4" max="8" size="3">
+           
+    
+        <input type="text" id="pais" name="name"  placeholder="modelo" required
+           minlength="4" maxlength="60" size="3">
+    
+        <input type="number" id="pais" name="name" placeholder="motor" required
+        minlength="4" maxlength="25" size="3">
+    </div>
+    <div class="contenido"> 
+        <input type="text" id="pais" name="name" placeholder="fecha publicacion"  required
+           min="1" maxlength="45" size="3">
+   
+        <input type="number" id="pais" name="name" placeholder="precio"required
+           min="4" maxlength="20" size="3">
+   
+   
+        <input type="text" id="pais" name="name" placeholder="moneda" required
+           min="4" max="8" size="3">
+
+           <select>
+            <option value="tipo">tipo coche</option>
+            <option>gama alta</option>
+            <option>gama media</option>
+            <option>gama baja</option>
+
+           </select>
+  </div>
+  <div class="contenido">
+       <select>
+            <option value="tipo">estado</option>
+            <option>nuevo</option>
+            <option>usado en buen estado</option>
+            <option>usado en mal estado</option>
+
+           </select>
+
+           <select>
+            <option value="tipo">movido a</option>
+            <option>gasolina</option>
+            <option>acpm</option>
+            <option>gas</option>
+            <option>electrico</option>
+
+           </select>
+
+           <select>
+            <option value="tipo">marca</option>
+            <option>Ford</option>
+            <option>Renault</option>
+            <option>Chevrolet</option>
+            <option>Hyundai</option>
+            <option>Toyota</option>
+            <option>otro</option>
+
+
+
+
+           </select>
+    </div>
+   <div class="detalles2">
+    <div class="subtitulo2">
+        <h3>DETALLES</h3>
+        </div>
+    
+        <div class="detalles">
+            <input class="d1" type="text" id="pais" name="name" placeholder="descripcion" required
+            size="3">
+    
+            <input class="d1" type="text" id="pais" name="name" placeholder="historial uso" required
+            size="3">
+
+            <input class="d1" type="text" id="pais" name="name" placeholder="antecedentes" required
+            size="3">
+            
+          
+    
+        </div>
+        <div class="b1">
+        <a href="#" class="button">GUARDAR</a>
+    </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
