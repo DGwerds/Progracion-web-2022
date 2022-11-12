@@ -5,21 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet'>
-  <title>Registra tu vehiculo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">  <title>Registra tu vehiculo</title>
 </head>
 
 <body>
-  <style type="text/css">
-    .table {
-        margin: 0 auto;
-        width: 80%;
-    }
-    </style>
-    <table class="table table-striped table-secondary text-center"  style="max-width: 70%;">
-        <thead class="table-active">
-            <tr>
-              <th colspan="4" class="text-center"><h4>REGISTRA TU VEHICULO<h4></th>
+    <table class="table pure-table pure-table-bordered centered" width="200" style="margin-left:auto;margin-right:auto">
+        <thead class="table-active" style="text-align: center">
+            <tr>  
+              <th colspan="4" class="center"><h4>REGISTRA TU VEHICULO<h4></th>
             </tr>
           </thead>
       <th colspan="4"><h4>Usuario:</h4>
@@ -76,11 +69,17 @@
      <tr>
       <th colspan="4"><h4>Antecedentes:</h4><textarea rows="1" cols="100" name="descripcion"></textarea></th>
      </tr>
-
-
+     
   </table>
-  <div class="text-center">
-    <br><button type="button" class="btn btn-outline-success">Registrar</button>
+  <div style="text-align: center">
+    <style>
+    .button-success {
+      background: rgb(28, 184, 65);}
+    .button-large {
+            font-size: 125%;
+        }
+    </style>
+    <br><button class="button-large button-success pure-button">Registrar</button>
   </div>
 </body>
 
