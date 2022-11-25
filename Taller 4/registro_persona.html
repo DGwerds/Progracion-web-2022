@@ -10,54 +10,57 @@
 </head>
 
 <body>
-    <script src="codigo.js"></script>
     <div class="pag">
         <div class="info">
-            <h1 class="titulo">INFORMACION DE USUARIO</h1>
+            <h1 class="titulo" id="titulo">INFORMACION DE USUARIO</h1>
         </div>
         <div class="formulario">
             <div class="titulo2">
                 <h2>INGRESE LOS DATOS DEL USUARIO</h2>
             </div>
 
-            
             <div class="contenido">
                 <input type="number" id="id" name="id" placeholder="id" required min="4" max="8" size="3">
 
 
-                <input type="number" id="id_pais" name="id_pais" placeholder="id pais" required min="4" max="8" size="3">
+                <input type="number" id="id_pais" name="id_pais" placeholder="id pais" required min="4" max="8"
+                    size="3">
 
             </div>
             <div class="contenido">
-                <input type="text" id="nombre" name="nombre" placeholder="nombre" required minlength="4" maxlength="25"
-                    size="3">
+                <input type="text" id="nombre" name="nombre" placeholder="nombre" minlength="1" maxlength="25" size="3">
 
-                <input type="text" id="apellido" name="apellido" placeholder="apellido" required minlength="4"
-                    maxlength="25" size="3">
+                <input type="text" id="apellido" name="apellido" placeholder="apellido" minlength="1" maxlength="25"
+                    size="3">
             </div>
             <div class="contenido">
-                <input type="text" id="direccion" name="direccion" placeholder="direccion" required min="1"
-                    maxlength="45" size="3">
+                <input type="text" id="direccion" name="direccion" placeholder="direccion" maxlength="45" size="3">
 
-                <input type="number" id="cedula" name="cedula" placeholder="cedula" required min="4" maxlength="20"
-                    size="3">
+                <input type="input" id="cedula" name="cedula" placeholder="cedula" maxlength="20"
+                    minlength="10" size="3">
             </div>
             <div class="contenido">
                 <input type="password" id="contraseña" name="contraseña" placeholder="contraseña" required min="4"
                     max="8" size="3">
 
-                <input type="text" id="email" name="email" placeholder="email" required min="4" maxlength="120"
-                    size="3">
+                <input type="password" id="c_contraseña" name="c_contraseña" placeholder="Confirmar contraseña" required min="4"
+                    max="8" size="3">
             </div>
             <div class="contenido">
                 <input type="text" id="telefono" name="telefono" placeholder="telefono" required minlength="3"
                     maxlength="20" size="3">
 
-                <button onclick="myFunc()" class="button">GUARDAR</button>
+                <input type="text" id="email" name="email" placeholder="email" minlength="1" maxlength="120" size="3">
+
+            </div>
+            <div class="centrar">
+                <button onclick="estado()" class="button" style="max-width: 500px;">GUARDAR</button>
+                <br>
+                <label id="lab" style="color: red; visibility: hidden;">Revisa bien mamawebo</label>
             </div>
         </div>
     </div>
-
+    <script src="codigo.js"></script>
 </body>
 
 </html>

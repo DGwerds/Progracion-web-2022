@@ -22,9 +22,12 @@ input {
     justify-content: space-evenly
 }
 
+.centrar{  
+    text-align: center;   
+} 
+
 .button {
     background-color: #5DADE2;
-    border: none;
     text-decoration: none;
     color: white;
     padding: 1%;
