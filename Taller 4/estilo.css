@@ -8,7 +8,7 @@
 }
 
 input {
-    height: 40%;
+    height: 50%;
     width: 30%;
     border: none;
     border-bottom: 2px solid #A6ACAF;
@@ -22,12 +22,9 @@ input {
     justify-content: space-evenly
 }
 
-.centrar{  
-    text-align: center;   
-} 
-
 .button {
     background-color: #5DADE2;
+    border: none;
     text-decoration: none;
     color: white;
     padding: 1%;
@@ -51,8 +48,6 @@ input {
     height: 100vh;
     color: white;
     margin: 0;
-
-
 }
 
 .titulo {
@@ -68,8 +63,13 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 20%;
 }
 
+.centrar{  
+    text-align: center;
+    margin-top: 5%;   
+}   
 
 input::-webkit-inner-spin-button {
     appearance: none;

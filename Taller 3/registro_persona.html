@@ -1,136 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: 50vh;
+            justify-content: space-evenly;
+            margin-top: 5%;
+        }
 
+        input {
+            height: 50%;
+            width: 30%;
+            border: none;
+            border-bottom: 2px solid #A6ACAF;
+            padding: 1% 1%;
+            margin: 2%;
+        }
 
-        .formulario{
-        display:flex;
-        flex-direction: column;
-        width: 60%;
-        height: 50vh;
-        justify-content: space-evenly;
-        margin-top: 5%;
-        
-        
-        
-    }
+        .contenido {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly
+        }
 
-    input{
-        height: 50%;
-        width: 30%;
-        border: none;
-        border-bottom: 2px solid #A6ACAF;
-        padding: 1% 1%;
-        margin: 2%;
-    }
+        .button {
+            background-color: #5DADE2;
+            border: none;
+            text-decoration: none;
+            color: white;
+            padding: 1%;
+            margin: 2%;
+            margin-top: 4%;
+        }
 
-    .contenido{
-        display: flex;
-        flex-direction: row;
-        justify-content:space-evenly
-    }
+        .pag {
+            display: flex;
+            flex-direction: row;
 
-    .button{
-        background-color: #5DADE2 ;
-        border: none;
-        text-decoration: none;
-        color: white;
-        padding: 1%;
-        margin: 2%;
-        margin-top: 4%;
-    }
-    .pag{
-        display: flex;
-        flex-direction: row;
-        
-    }
-    .info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 40%;
-        background-color: #5DADE2 ;
-        height: 100vh;
-        color: white;
-        margin: 0;
-        
+        }
 
-    }
-    .titulo{
-        margin-bottom: 20%;
-    }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            background-color: #5DADE2;
+            height: 100vh;
+            color: white;
+            margin: 0;
+        }
 
-    * {
-    margin:0; 
-    padding:0;
-}
+        .titulo {
+            margin-bottom: 20%;
+        }
 
-.titulo2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
     </style>
-  
+
 </head>
+
 <body>
+    <div class="pag">
+        <div class="info">
+            <h1 class="titulo">INFORMACION DE USUARIO</h1>
+        </div>
+        <div class="formulario">
+            <div class="titulo2">
+                <h2>INGRESE LOS DATOS DEL USUARIO</h2>
+            </div>
 
-<div class="pag">
-    <div class="info">
-        <h1 class="titulo">INFORMACION DE USUARIO</h1>
-    </div>
-<div class="formulario">
-    <div class="titulo2">
-        <h2>INGRESE LOS DATOS DEL USUARIO</h2>
-    </div>
-    
-    <div class="contenido"> 
-        
-        <input type="number" id="pais" name="name" placeholder="id"  required
-           min="4" max="8" size="3">
-    
-    
-        <input type="number" id="pais" name="name" placeholder="id pais" required
-           min="4" max="8" size="3">
-           
-    </div>
-    <div class="contenido"> 
-        <input type="text" id="pais" name="name"  placeholder="nombre" required
-           minlength="4" maxlength="25" size="3">
-        
-        <input type="text" id="pais" name="name" placeholder="apellido" required
-        minlength="4" maxlength="25" size="3">
-    </div>
-    <div class="contenido"> 
-        <input type="text" id="pais" name="name" placeholder="direccion"  required
-           min="1" maxlength="45" size="3">
-   
-        <input type="number" id="pais" name="name" placeholder="cedula"required
-           min="4" maxlength="20" size="3">
-    </div>
-    <div class="contenido"> 
-        <input type="password" id="pais" name="name" placeholder="contraseña" required
-           min="4" max="8" size="3">
+            <div class="contenido">
 
-           <input type="text" id="pais" name="name" placeholder="email" required
-           min="4" maxlength="120" size="3">
-    </div>
-    <div class="contenido"> 
-        <input type="text" id="pais" name="name" placeholder="telefono" required
-           minlength="3" maxlength="20" size="3">
+                <input type="number" id="pais" name="name" placeholder="id" required min="4" max="8" size="3">
 
-           <a href="#" class="button">GUARDAR</a>
-    </div>
 
-</div>
-</div>
+                <input type="number" id="pais" name="name" placeholder="id pais" required min="4" max="8" size="3">
+
+            </div>
+            <div class="contenido">
+                <input type="text" id="pais" name="name" placeholder="nombre" required minlength="4" maxlength="25"
+                    size="3">
+
+                <input type="text" id="pais" name="name" placeholder="apellido" required minlength="4" maxlength="25"
+                    size="3">
+            </div>
+            <div class="contenido">
+                <input type="text" id="pais" name="name" placeholder="direccion" required min="1" maxlength="45"
+                    size="3">
+
+                <input type="number" id="pais" name="name" placeholder="cedula" required min="4" maxlength="20"
+                    size="3">
+            </div>
+            <div class="contenido">
+                <input type="password" id="pais" name="name" placeholder="contraseña" required min="4" max="8" size="3">
+
+                <input type="text" id="pais" name="name" placeholder="email" required min="4" maxlength="120" size="3">
+            </div>
+            <div class="contenido">
+                <input type="text" id="pais" name="name" placeholder="telefono" required minlength="3" maxlength="20"
+                    size="3">
+
+                <a href="#" class="button">GUARDAR</a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
+
 </html>
