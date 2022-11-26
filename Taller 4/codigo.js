@@ -41,8 +41,8 @@ function cambiar_color(objeto, condicion, mensaje) {
 function validacion_final() {
    let mensaje = ""
    elementos.forEach(function (el) {
-      if (el.value == "") {
-         mensaje += "Casilla " + el.id + " vacia<br/>"
+      if (el.value == "" || el.style.color == "red") {
+         mensaje += "Error en la casilla " + el.id + " <br/>"
       }
    });
    error.innerHTML = mensaje
