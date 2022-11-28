@@ -5,8 +5,8 @@ document.getElementById("direccion").addEventListener("input", validar_direccion
 
 let error = document.getElementById("Mensaje_error");
 
-contraseña: /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#%/&])(?!\s)[a-zA-Z0-9#%/&]{15,20}$/,
-email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+contraseña: /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#%/&])(?!\s)[a-zA-Z0-9#%/&]{15,20}$/
+email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
 function validar_tamaño() {
    let tamano = this.value.length;
@@ -42,7 +42,7 @@ function cambiar_color(objeto, condicion, mensaje) {
 function validacion_final() {
    let mensaje = ""
    elementos.forEach(function (el) {
-      if (el.value == "" || el.style.color == "red") {
+      if (el.value == "" || el.style.borderBottomColor == "red") {
          cambiar_color(el, true)
          mensaje += "Error en la casilla " + el.id + " <br/>"
       }
