@@ -35,13 +35,13 @@ input {
 }
 
 
-.contenido {
+.contenido{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly
 }
 
-.button {
+button {
     background-color: #5DADE2;
     border: none;
     text-decoration: none;
@@ -86,8 +86,11 @@ input {
 }
 
 .centrar{  
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-top: 5%;   
+    width: 100%;  
+    align-items: center;
 }   
 
 input::-webkit-inner-spin-button {
