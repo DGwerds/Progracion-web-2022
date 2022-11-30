@@ -2,23 +2,55 @@ let elementos = document.getElementsByName("inputB")
 elementos.forEach(obj => obj.addEventListener("input", validar_tamaño))
 
 document.getElementById("direccion").addEventListener("input", validar_direccion)
+let contraseña = document.getElementById("contraseña")
+contraseña.addEventListener("input", validar_contraseña)
+document.getElementById("c_contraseña").addEventListener("input", confirmar_contraseña)
 
-let error = document.getElementById("Mensaje_error");
+let msm_error = document.getElementById("Mensaje_error");
 
-//contraseña: /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#%/&])(?!\s)[a-zA-Z0-9#%/&]{15,20}$/
 //email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
 function validar_tamaño() {
    let tamano = this.value.length;
    let rango = [this.getAttribute("min"), this.getAttribute("max")]
-   let condicion = tamano < rango[0] || tamano > rango[1]
+   let error = tamano < rango[0] || tamano > rango[1]
    let mensaje = "El campo " + this.id + " "
    if (rango[0] != 1) {
       mensaje += "debe contener entre " + rango[0] + " y " + rango[1] + " caracteres"
    } else {
-      mensaje += "no puede quedar vacio y no debe sobrepasar los "+rango[1]+" caracteres"
+      mensaje += "no puede quedar vacio y no debe sobrepasar los " + rango[1] + " caracteres"
    }
-   cambiar_color(this, condicion, mensaje)
+   cambiar_color(this, error, mensaje)
+}
+
+function validar_contraseña() {
+   let texto = this.value
+   let rango = [this.getAttribute("min"), this.getAttribute("max")]
+   let error = true;
+   var mensaje = ""
+   if (texto.length < rango[0] || texto.length > rango[1]){
+      mensaje += "La contraseña debe tener entre 15 y 20 caracteres (" + texto.length + ")<br/>"
+   }
+   if (!/(?=.*[A-Z])/.test(texto)){
+      mensaje += "Debe contener mayúsculas<br/>"
+   }
+   if (!/(?=.*[0-9])/.test(texto)){
+      mensaje += "Debe contener numeros<br/>"
+   }
+   if (!/(?=.*[#%/&])/.test(texto)){
+      mensaje += "Debe contener los siguientes caracteres [#,%,/,&]"
+   }
+   if (mensaje == ""){
+      error = false
+   }
+   cambiar_color(this, error, mensaje)
+}
+
+function confirmar_contraseña(){
+   console.log(contraseña.value + " dds " + this.value + "  " + !contraseña.value == this.value)
+   let error = !contraseña.value == this.value
+   const mensaje = "Las contraseñas no coinciden"
+   cambiar_color(this, error, mensaje)
 }
 
 function validar_direccion() {
@@ -29,13 +61,13 @@ function validar_direccion() {
    cambiar_color(this, condicion, mensaje)
 }
 
-function cambiar_color(objeto, condicion, mensaje) {
-   if (condicion) {
+function cambiar_color(objeto, error, mensaje) {
+   if (error) {
       objeto.style.borderBottomColor = "red";
-      error.innerHTML = mensaje
+      msm_error.innerHTML = mensaje
    } else {
       objeto.style.borderBottomColor = "green";
-      error.innerHTML = ""
+      msm_error.innerHTML = ""
    }
 }
 
