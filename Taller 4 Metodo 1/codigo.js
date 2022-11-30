@@ -211,8 +211,9 @@ e.preventDefault();
 if(campos.apellido && campos.cedula && campos.contraseña && campos.direccion && campos.email && campos.id && campos.id_pais && campos.nombre && campos.telefono && campos.contraseña2){
     formulario.reset();
     error.innerHTML="envio exitoso";
+    window.location="C:/Users/Acer/Documents/GitHub/Progracion-web-2022/Taller4Carros/Registro_Gustos.html";
     
-    
+
 }else{
     error.innerHTML="llene bien el formulario";
 }
