@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang=es>
+
+<head>
+  <meta charset=UTF-8>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width" , initial-scale=1.0>
+  <link rel=stylesheet href=estiloCarro.css>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class=pag>
+    <div class=info>
+      <h1 class=titulo id=titulo>REGISTRO DE GUSTOS DE VEHICULOS</h1>
+    </div>
+    <div class=formulario>
+      <div class=titulo2>
+        <h2>DATOS DEL VEHICLO DESEADO</h2>
+      </div></br>
+      <form action="" method="POST" id="form">
+      <div class=dropdown>
+            <form>
+            <select required>
+                <option value="" disabled selected hidden>Color Favorito</option>
+                <option value="0">Rojo</option>
+                <option value="1">Azul</option>
+                <option value="2">Negro</option>
+                <option value="3">Gris</option>
+                <option value="4">Vinotinto</option>
+                <option value="5">Blanco</option>
+            </select>
+            </form>
+
+            <form>
+                <select required>
+                    <option value="" disabled selected hidden>Marca Preferida</option>
+                    <option value="0">Ford</option>
+                    <option value="1">Renault</option>
+                    <option value="2">Mazda</option>
+                    <option value="3">Kia</option>
+                    <option value="4">Chevrolet</option>
+                    <option value="5">Honda</option>
+                </select>
+                </form>
+      </div></br>
+
+      <div class=dropdown>
+        <form>
+        <select required>
+            <option value="" disabled selected hidden>Estilo Preferido</option>
+            <option value="0">Coupe</option>
+            <option value="1">Hatchback</option>
+            <option value="2">Camioneta</option>
+            <option value="3">Deportivo</option>
+        </select>
+        </form>
+
+        <form>
+            <select required>
+                <option value="" disabled selected hidden>Modelo Preferido</option>
+                <option value="0">2010</option>
+                <option value="1">2011</option>
+                <option value="2">2012</option>
+                <option value="3">2015</option>
+                <option value="4">2020</option>
+                <option value="5">2021</option>
+            </select>
+        </form>
+  </div>
+          <div class=centrar>
+        <button type="submit" class="formulario__btn">Enviar</button>
+        <label id="Mensaje_error"></label>
+    </div> 
+  </div>
+</body>
+
+</html>
