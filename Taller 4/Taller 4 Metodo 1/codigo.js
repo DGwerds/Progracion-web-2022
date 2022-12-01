@@ -175,7 +175,7 @@ formulario.addEventListener("submit", (e) => {
     if (campos.apellido && campos.cedula && campos.contraseña && campos.direccion && campos.email && campos.id && campos.id_pais && campos.nombre && campos.telefono && campos.contraseña2) {
         formulario.reset();
         error.innerHTML = "envio exitoso";
-        window.location = "../Taller4Carros/Registro_Gustos.html";
+        window.location = "../Taller 4 Carros/Registro_Gustos.html";
     } else {
         error.innerHTML = "llene bien el formulario";
     }

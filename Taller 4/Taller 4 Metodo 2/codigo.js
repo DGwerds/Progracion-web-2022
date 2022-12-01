@@ -72,5 +72,5 @@ function validacion_final() {
          cambiar_color(el, true, mensaje)
       }
    });
-   if (msm_error.innerHTML == "") window.location = "../Taller4Carros/Registro_Gustos.html";
+   if (msm_error.innerHTML == "") window.location = "../Taller 4 Carros/Registro_Gustos.html";
 } // - 58%
