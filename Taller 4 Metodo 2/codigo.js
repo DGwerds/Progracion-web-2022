@@ -1,14 +1,9 @@
-let elementos = document.getElementsByName("inputB")
-elementos.forEach(obj => obj.addEventListener("input", validar_tamaño))
-
+document.getElementsByName("inputB").forEach(obj => obj.addEventListener("input", validar_tamaño))
 document.getElementById("direccion").addEventListener("input", validar_direccion)
-let contraseña = document.getElementById("contraseña")
-contraseña.addEventListener("input", validar_contraseña)
+document.getElementById("email").addEventListener("input", validar_email)
+document.getElementById("contraseña").addEventListener("input", validar_contraseña)
 document.getElementById("c_contraseña").addEventListener("input", confirmar_contraseña)
-
-let msm_error = document.getElementById("Mensaje_error");
-
-//email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+const msm_error = document.getElementById("Mensaje_error");
 
 function validar_tamaño() {
    let tamano = this.value.length;
@@ -28,27 +23,18 @@ function validar_contraseña() {
    let rango = [this.getAttribute("min"), this.getAttribute("max")]
    let error = true;
    var mensaje = ""
-   if (texto.length < rango[0] || texto.length > rango[1]){
+   if (texto.length < rango[0] || texto.length > rango[1]) {
       mensaje += "La contraseña debe tener entre 15 y 20 caracteres (" + texto.length + ")<br/>"
    }
-   if (!/(?=.*[A-Z])/.test(texto)){
-      mensaje += "Debe contener mayúsculas<br/>"
-   }
-   if (!/(?=.*[0-9])/.test(texto)){
-      mensaje += "Debe contener numeros<br/>"
-   }
-   if (!/(?=.*[#%/&])/.test(texto)){
-      mensaje += "Debe contener los siguientes caracteres [#,%,/,&]"
-   }
-   if (mensaje == ""){
-      error = false
-   }
+   if (!/(?=.*[A-Z])/.test(texto)) mensaje += "Debe contener mayúsculas<br/>"
+   if (!/(?=.*[0-9])/.test(texto)) mensaje += "Debe contener numeros<br/>"
+   if (!/(?=.*[#%/&])/.test(texto)) mensaje += "Debe contener los siguientes caracteres [#,%,/,&]"
+   if (mensaje == "") error = false
    cambiar_color(this, error, mensaje)
 }
 
-function confirmar_contraseña(){
-   console.log(contraseña.value + " dds " + this.value + "  " + !contraseña.value == this.value)
-   let error = !contraseña.value == this.value
+function confirmar_contraseña() {
+   let error = document.getElementById("contraseña").value != this.value
    const mensaje = "Las contraseñas no coinciden"
    cambiar_color(this, error, mensaje)
 }
@@ -58,6 +44,12 @@ function validar_direccion() {
    const mensaje = "El campo dirección debe empezar por las siguientes palabras.\
       cll, cra, av, anv, trans,"
    if (this.value == "") { condicion = false }
+   cambiar_color(this, condicion, mensaje)
+}
+
+function validar_email() {
+   let condicion = !/^[a-zA-Z0-9_.+-]+@[a-zA-Z-]+\.[a-zA-Z-.]+$/.test(this.value)
+   const mensaje = "El email no es valido"
    cambiar_color(this, condicion, mensaje)
 }
 
@@ -73,11 +65,12 @@ function cambiar_color(objeto, error, mensaje) {
 
 function validacion_final() {
    let mensaje = ""
+   const elementos = document.querySelectorAll('#form input')
    elementos.forEach(function (el) {
       if (el.value == "" || el.style.borderBottomColor == "red") {
-         cambiar_color(el, true)
          mensaje += "Error en la casilla " + el.id + " <br/>"
+         cambiar_color(el, true, mensaje)
       }
    });
-   error.innerHTML = mensaje
-}
+   if (msm_error.innerHTML == "") window.location = "../Taller4Carros/Registro_Gustos.html";
+} // - 58%
