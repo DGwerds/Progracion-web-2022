@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JsON data to HTML table </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 180%;
+    }
+    td, th {
+      border: 1px solid #cc5e5e;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #85a6c3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for first names, last n</p>
+  <input id="myInput" type="text" placeholder="Search..">
+  <br><br>
+  <div class="table-responsive">
+    <h1>Data Fetch into HTML Table using Ajax Jquery getI SON method</h1>
+    <br>
+    <table class="table table-bordered table-striped" id="employee_data">
+      <theads>
+        <tr>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Geo</th>
+          <th>Phone</th>
+          <th>Website</th>
+          <th>company</th>
+        </tr>
+      </theads>
+    </table>
+  </div>
+</body>
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+    $.getJSON("https://jsonplaceholder.typicode.com/users",function (data) {
+      var employee_data = "";
+      $.each(data, function (key, value) {
+        employee_data + '<tr>';
+        employee_data += '<td>' + value.name + '</td>';
+        employee_data += '<tds' + value.username + '</td>';
+        employee_data += '<td>' + value.email + '</td>';
+        employee_data += '<tds' + value.address + '</td>';
+        employee_data += '<td>' + value.geo + '</td>';
+        employee_data += '<td>' + value.phone + '</td>';
+        employee_data += '<td>' + value.website + '</td>';
+        employee_data += '<td>' + value.company + '</td>';
+        employee_data += '<tr>';
+      });
+      $('#myTable').append(employee_data);
+    });
+
+  });
+  
+  $(documant).ready(function() {
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexof(value) > -1)
+      });
+    });
+  });
+</script>
+
+</html>
