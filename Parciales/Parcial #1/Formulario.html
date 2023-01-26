@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang=es>
+
+<head>
+    <meta charset=UTF-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width" , initial-scale=1.0>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Formulario de afiliación</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card mx-auto" style="width: 25rem;">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="Ingresa tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <label for="gusto-input">Gustos:</label>
+                        <input type="text" class="form-control" id="gusto-input">
+                    </div>
+
+                    <table class="table" id="tabla-gustos">
+                        <thead>
+                            <tr>
+                                <th>Gusto</th>
+                                <th>Editar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="container" style="display:none" id="menu-cambios">
+                        <label>Pulse Aceptar para guardar los cambios o cancelar para anularlos</label>
+                        <div class="col-sm-12">
+                            <div id="botones-accion">
+                                <button type="button" class="btn btn-success"
+                                    onclick="guardarCambios()">Aceptar</button>
+                                <button type="button" class="btn btn-danger"
+                                    onclick="cancelarCambios()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("gusto-input").addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            agregarFila();
+        }
+    });
+
+    function agregarFila() {
+        var gusto = document.getElementById("gusto-input").value;
+        var tabla = document.getElementById("tabla-gustos").getElementsByTagName('tbody')[0];
+        var fila = tabla.insertRow(0);
+        var celda1 = fila.insertCell(0);
+        var celda2 = fila.insertCell(1);
+        celda1.innerHTML = '<td><input type="text" class="form-control" value="' + gusto + '"disabled=true></td>';
+        celda2.innerHTML = '<button type="button" class="btn btn-primary" onclick="editarFila(this)">Editar</button>';
+        document.getElementById("gusto-input").value = "";
+    }
+
+
+    function editarFila(boton) {
+        let fila = boton.parentNode.parentNode;
+        fila.getElementsByTagName("input")[0].disabled = false;
+        let menu_cambios = document.getElementById("menu-cambios").style;
+        var celda2 = boton.parentNode;
+        if (boton.innerHTML === "Editar") {
+            boton.style.display = "none";
+            celda2.innerHTML = '<label for="edicion-label">En edición</label>';
+            menu_cambios.display = "block";
+        }
+    }
+
+
+</script>
+
+</html>
