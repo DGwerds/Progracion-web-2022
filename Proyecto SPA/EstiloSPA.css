@@ -1,0 +1,45 @@
+section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+  }
+
+  section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+
+  section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+  body {
+    background-color: #313131;
+    width: 600px; 
+    margin: 0 auto;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-container img {
+    object-fit: cover;
+  }
+
+  .texto {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+
+  #text-container {
+    font-family: "Cyberpunk Is Not Dead", sans-serif;
+  }
