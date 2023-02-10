@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+section img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+body {
+    background-color: #313131;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    object-fit: cover;
+}
+
+.texto {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+#text-container {
+    font-family: "Cyberpunk Is Not Dead", sans-serif;
+}
+
+</style>
+</head>
+<body style="width: 600px; margin: 0 auto;">
+
+    <div class="img-container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cyberpunk_Edgerunners_logo.png/800px-Cyberpunk_Edgerunners_logo.png" alt="logo">
+    </div>
+    <br>
+
+    <section>
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/a/ac/David_Infobox_CPEDGE.png/revision/latest/scale-to-width-down/350?cb=20220915120459" id="img1">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/f/ff/Lucy_Infobox_CPEDGE.png/revision/latest/scale-to-width-down/350?cb=20220912183850"id="img2">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/f/fe/Maine_Infobox_CPEDGE.png/revision/latest/scale-to-width-down/350?cb=20220913135206"id="img3">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/6/68/Dorio_Infobox_CPEDGE.jpg/revision/latest?cb=20220831220752"id="img4">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/6/6a/Kiwi_Infobox_CPEDGE.jpg/revision/latest/scale-to-width-down/350?cb=20220831221315"id="img5">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/c/c6/Pilar_Infobox_CPEDGE.jpg/revision/latest?cb=20220831221902"id="img6">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/1/19/Rebecca_Infobox_CPEDGE.png/revision/latest/scale-to-width-down/350?cb=20220916202047"id="img7">
+        <img src="https://static.wikia.nocookie.net/cyberpunk/images/6/6d/Falco_Infobox_CPEDGE.jpg/revision/latest/scale-to-width-down/350?cb=20220915021736"id="img8">
+    </section>
+
+    <br>
+    <div id="text-container" class="texto"></div>
+
+</body>
+
+<script>
+    document.getElementById("img1").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "David Martínez es el protagonista. Se convirtió en mercenario y miembro de la tripulación edgerunner de Maine en 2076, cuando estuvo involucrado en una serie de eventos desgarradores que lo llevaron a alcanzar el estatus de leyenda de Night City.";
+});
+
+document.getElementById("img2").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Lucyna Kushinada, más conocida simplemente como Lucy, es una netrunner y la deuteragonista de Cyberpunk: Edgerunners.";
+});
+
+document.getElementById("img3").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Maine, es el lider de la banda a la que David se une en 2076";
+});
+
+document.getElementById("img4").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Dorio, es la pareja y mano derecha de Maine";
+});
+
+document.getElementById("img5").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Kiwi, la odio con toda mi alma";
+});
+
+document.getElementById("img6").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Pilar, hermano de Rebeca y el manos largas";
+});
+
+document.getElementById("img7").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Rebecca, la maniatica del equipo, esta enamorada de David";
+});
+
+document.getElementById("img8").addEventListener("mouseover", function() {
+  document.getElementById("text-container").innerHTML = "Falco, hace de conductor en algunos golpes de la banda";
+});
+</script>
+</html>          
