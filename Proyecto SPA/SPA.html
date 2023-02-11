@@ -15,7 +15,7 @@
   </div>
   <br>
 
-  <section>
+  <section id="contenedor_imagenes">
     <img src="Imagenes/David.png" id="David">
     <img src="Imagenes/Lucyna.png" id="Lucyna">
     <img src="Imagenes/Maine.png" id="Maine">
@@ -31,40 +31,5 @@
 
 </body>
 
-<script>
-  let imagenes = document.getElementsByTagName("img")
-  let contenedor_texto = document.getElementById("text-container")
-  Array.from(imagenes).forEach(imagen => imagen.addEventListener("mouseover", texto));
-
-  function texto() {
-    switch (this.id) {
-      case 'David':
-      contenedor_texto.innerHTML = "David Martínez es el protagonista. Se convirtió en \
-        mercenario y miembro de la tripulación edgerunner de Maine en 2076, cuando estuvo \
-        involucrado en una serie de eventos desgarradores que lo llevaron a alcanzar el estatus \
-        de leyenda de Night City.";
-        break;
-
-      case 'Lucyna':
-        ontenedor_texto.innerHTML = "ahorita hago las demas"
-        break;
-      default:
-        console.log(`Termino Lueggooooooo.`);
-    }
-  }
-  //   document.getElementById("text-container").innerHTML = "Lucyna Kushinada, más conocida simplemente como Lucy, es una netrunner y la deuteragonista de Cyberpunk: Edgerunners.";
-
-  //   document.getElementById("text-container").innerHTML = "Maine, es el lider de la banda a la que David se une en 2076";
-
-  //   document.getElementById("text-container").innerHTML = "Dorio, es la pareja y mano derecha de Maine";
-
-  //   document.getElementById("text-container").innerHTML = "Kiwi, la odio con toda mi alma";
-
-  //   document.getElementById("text-container").innerHTML = "Pilar, hermano de Rebeca y el manos largas";
-
-  //   document.getElementById("text-container").innerHTML = "Rebecca, la maniatica del equipo, esta enamorada de David";
-
-  //   document.getElementById("text-container").innerHTML = "Falco, hace de conductor en algunos golpes de la banda";
-</script>
-
+<script src="ScriptSPA.js"></script>
 </html>

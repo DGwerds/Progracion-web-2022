@@ -24,7 +24,6 @@ section {
     width: 600px; 
     margin: 0 auto;
   }
-
   .img-container {
     display: flex;
     justify-content: center;
@@ -39,4 +38,5 @@ section {
     font-family: "Cyberpunk Is Not Dead", sans-serif;
     color: rgb(255, 255, 255);
     font-size: 20px;
+    min-height: 100px;
   }
