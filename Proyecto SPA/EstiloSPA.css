@@ -19,10 +19,6 @@ section {
     filter: contrast(120%);
   }
 
-  body {
-    background-color: #313131;
-  }
-
   .img-container {
     text-align: center;
   }
@@ -34,3 +30,25 @@ section {
     min-height: 50px;
     text-align: center;
   }
+
+  body{
+    margin: 0;
+    padding: 0;
+    background-image:url("https://images.alphacoders.com/988/988021.jpg");
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .content {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    z-index: 1;
+  }
+  
