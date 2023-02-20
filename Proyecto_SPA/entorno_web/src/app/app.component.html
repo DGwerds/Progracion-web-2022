@@ -1,0 +1,70 @@
+<router-outlet></router-outlet>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-4">
+      <ul class="list-group">
+        <li
+        *ngFor="let user of userArray" 
+        class="list-group-item list-group-item-action"
+        (click)="openForEdit(user)"
+        [class.active]="user == selectedUser"
+        >
+          <span class="badge badge-pill badge-success">{{user.id}}</span> {{ user.nombre }} - {{ user.apellido }} - {{ user.tipodocumento }} - {{ user.documento }} - {{ user.direccion }} - {{ user.desdireccion }} - {{ user.fecha }} - {{ user.email }} - {{ user.telefono }} - {{ user.usuario }} - {{ user.password }}
+        </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title">
+            Inserta un nuevo Usuario
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.nombre" placeholder="Ingresa Tu Nombre" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.apellido" placeholder="Ingresa Tu Apellido" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.tipodocumento" placeholder="CC/TI/CE" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="number" [(ngModel)]="selectedUser.documento" placeholder="Ingresa Numero De Identidad" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.direccion" placeholder="Ingresa tu Direccion" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.desdireccion" placeholder="Descrición de la Direccion" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="date" [(ngModel)]="selectedUser.fecha" placeholder="Ingresa tu Fecha de Nacimiento" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.email" placeholder="Ingresa tu Correo" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="number" [(ngModel)]="selectedUser.telefono" placeholder="Ingresa tu Numero de Telefono" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="text" [(ngModel)]="selectedUser.usuario" placeholder="Usuario" class="form-control" id="">
+          </div>
+          <div class="from-group">
+            <input type="password" [(ngModel)]="selectedUser.password" placeholder="Contraseña" class="form-control" id="">
+          </div>
+          <button (click)="addOrEdit()" class="btn btn-success mt-2">
+            Enviar
+          </button>
+          <button 
+          *ngIf="selectedUser.id !== 0"
+          class="btn btn-danger mt-2"
+          (click)="delete()"
+          >
+            Eliminar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img width="300" alt="Angular Logo" src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg">
+    </div>
+  </div>
+</div> -->

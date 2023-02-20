@@ -1,0 +1,115 @@
+<div class="container mt-5">
+	<div class="col-lg-6 offset-lg-3">
+		<div class="card">
+			<div class="card-body text-center">
+				<span class="title">Create User</span>
+				<form class="mt-3" [formGroup]="userForm" (ngSubmit)="addUser()">
+					<div class="mb-3">
+						<input type="text" formControlName="nombre" class="form-control form-control-lg"
+							placeholder="NOMBRE">
+						<div class="text-danger"
+							*ngIf="userForm.get('nombre')?.hasError('required') && userForm.get('nombre')?.touched">
+							<span>El nombre es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="apellido" class="form-control form-control-lg"
+							placeholder="APELLIDO">
+						<div class="text-danger"
+							*ngIf="userForm.get('apellido')?.hasError('required') && userForm.get('apellido')?.touched">
+							<span>El apellido es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="tipodocumento" class="form-control form-control-lg"
+							placeholder="TI//CC//CE">
+						<div class="text-danger"
+							*ngIf="userForm.get('tipodocumento')?.hasError('required') && userForm.get('tipodocumento')?.touched">
+							<span>El tipo de documento es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="documento" class="form-control form-control-lg"
+							placeholder="N. DOCUMENTO">
+						<div class="text-danger"
+							*ngIf="userForm.get('documento')?.hasError('required') && userForm.get('documento')?.touched">
+							<span>El documento es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="direccion" class="form-control form-control-lg"
+							placeholder="DIRECCION">
+						<div class="text-danger"
+							*ngIf="userForm.get('direccion')?.hasError('required') && userForm.get('direccion')?.touched">
+							<span>La direccion es requerida</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="desdireccion" class="form-control form-control-lg"
+							placeholder="DESCRIPCION DE LA DIRECCION">
+						<div class="text-danger"
+							*ngIf="userForm.get('desdireccion')?.hasError('required') && userForm.get('desdireccion')?.touched">
+							<span>La descripcion de la direccion es requerida</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="date" formControlName="fecha" class="form-control form-control-lg"
+							placeholder="DD/MM/AAAA">
+						<div class="text-danger"
+							*ngIf="userForm.get('fecha')?.hasError('required') && userForm.get('fecha')?.touched">
+							<span>La fecha de nacimiento es requerida</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="email" class="form-control form-control-lg"
+							placeholder="EMAIL">
+						<div class="text-danger"
+							*ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+							<span>El correo es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="number" formControlName="telefono" class="form-control form-control-lg"
+							placeholder="TELEFONO">
+						<div class="text-danger"
+							*ngIf="userForm.get('telefono')?.hasError('required') && userForm.get('telefono')?.touched">
+							<span>El numero de telefono es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="text" formControlName="usuario" class="form-control form-control-lg"
+							placeholder="USUARIO">
+						<div class="text-danger"
+							*ngIf="userForm.get('usuario')?.hasError('required') && userForm.get('usuario')?.touched">
+							<span>El usario es requerido</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<input type="password" formControlName="password" class="form-control form-control-lg"
+							placeholder="PASSWORD">
+						<div class="text-danger"
+							*ngIf="userForm.get('password')?.hasError('required') && userForm.get('password')?.touched">
+							<span>La contraseña es requerida</span>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<button routerLink="/" class="btn btn-secondary btn-lg float-start">Back</button>
+						<button type="submit" [disabled]="userForm.invalid"
+							class="btn btn-success btn-lg float-end">Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
