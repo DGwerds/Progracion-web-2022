@@ -3,6 +3,7 @@
 Este repositorio contiene una serie de proyectos desarrollados como parte de mi curso de programación web. Cada proyecto representa un hito en mi aprendizaje y práctica de tecnologías clave en el desarrollo web.
 
 Contenido del Repositorio:
+
 **Taller 2:** Conjunto de páginas web básicas que sirven como introducción al desarrollo web. Aunque carece de estilos CSS sofisticados, incluye elementos esenciales de programación web.
 
 
